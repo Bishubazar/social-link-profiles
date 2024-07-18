@@ -1,3 +1,26 @@
+const links = [
+    {
+        title: "Github",
+        href: "/",
+    },
+    {
+        title: "Frontend Mentor",
+        href: "/",
+    },
+    {
+        title: "LinkedIn",
+        href: "/",
+    },
+    {
+        title: "Twitter",
+        href: "/",
+    },
+    {
+        title: "Instagram",
+        href: "/",
+    },
+];
+
 function App() {
     return (
         <section className="flex items-center justify-center w-screen h-screen bg-x-grey-900">
@@ -19,42 +42,18 @@ function App() {
                 <p className="">"Front-end developer and avid reader."</p>
                 <div className="flex flex-col gap-4 ">
                     {links.map((item) => (
-                        <ProfileLink key={item.title} title={item.title} />
+                        <a
+                            href={item.href}
+                            key={item.title}
+                            className="px-24 py-3 font-semibold duration-150 rounded-md hover:text-x-grey-900 hover:bg-green bg-x-grey-700"
+                        >
+                            {item.title}
+                        </a>
                     ))}
                 </div>
             </article>
         </section>
     );
 }
-
-const links = [
-    {
-        title: "Github",
-    },
-    {
-        title: "Frontend Mentor",
-    },
-    {
-        title: "LinkedIn",
-    },
-    {
-        title: "Twitter",
-    },
-    {
-        title: "Instagram",
-    },
-];
-
-const ProfileLink = ({ href, key, title }) => {
-    return (
-        <a
-            href={href}
-            key={key}
-            className="px-24 py-3 font-semibold duration-150 rounded-md hover:text-x-grey-900 hover:bg-green bg-x-grey-700"
-        >
-            {title}
-        </a>
-    );
-};
 
 export default App;
