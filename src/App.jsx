@@ -32,7 +32,7 @@ function App() {
                     className="w-20 rounded-full aspect-square"
                 />
                 <div>
-                    <h1 className="mb-2 text-2xl font-medium">
+                    <h1 className="mb-2 text-2xl font-semibold">
                         Jessica Randall
                     </h1>
                     <h3 className="font-bold text-green">
